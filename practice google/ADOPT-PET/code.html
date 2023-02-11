@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- THIS IS FROM THE HTML INDEX PAGE
+        NORMAL INFORMATION
+    {% if data[0]['title'] == "Overwatch 2" %}
+    <iframe width="420" height="315" src="{{data[0]['thumbnail']}}" frameborder = "5"></iframe>
+    <p>Genre: {{data[0]['genre']}}</p>
+    <h3>{{data[0]['title']}}</h3>
+    <p> {{ data[0]['short_description']}}</p>
+    {% else %}
+    <img class="aotd-img" src="{{data[0]['release_date']}}">
+    {% endif %}
+ -->
+
+    <!-- THIS CODE IS FROM RESULT INDEX
+        NORMAL INFORMATION
+    <main>
+        <div class="box">
+            <h1>Message received!</h1>
+            <a href="/">Back</a>
+        </div>
+
+        {% if data[0]['title'] == "Overwatch 2" %}
+        <iframe width="420" height="315" src="{{data[0]['thumbnail']}}" frameborder = "5"></iframe>
+        <p>Genre: {{data[0]['genre']}}</p>
+        {% else %}
+        <img class="aotd-img" src="{{data[0]['release_date']}}">
+        {% endif %}
+
+        
+
+    </main> -->
+    <!-- <body>
+            INDEX IN PROCESS
+        <h1>Welcome to Gamer Labs</h1>
+        <p>Search for hundres of games.... Available for unlimited time only!!</p>
+    
+    
+        <div class="formulation">
+            <h1>Enter the name of the</h1>
+            <form action="/message" method="post">
+                <input type="text" name="message" placeholder="Message"> 
+                <input type="submit" value="Send" /> 
+            </form> 
+        </div>
+    
+      </body> -->
+
+
+
+      <!-- 
+        OTHER CODE FOR THE RESULT HTML
+        <main>
+        <div class="box">
+            <h1>Message received!</h1>
+            <a href="/">Back</a>
+        </div>
+
+        {% for message in {{data[title]}}%}
+            <iframe width="420" height="315" src="{{data[i]['thumbnail']}}" frameborder = "5"></iframe>
+            <p>Genre: {{data[i]['genre']}}</p>
+            <h3>{{data[i]['title']}}</h3>
+            <p> {{ data[i]['short_description']}}</p>
+        {% endfor %}
+        
+
+    </main>  -->
+</body>
+</html>
