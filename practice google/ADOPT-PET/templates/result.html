@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,21 +8,73 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+          }
+          body{
+            background-image: url('https://i.pinimg.com/564x/9a/4c/40/9a4c40d5552079c029d188ad51e23edc.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            color:white;
+          }
+        main{
+            padding-left:90px;
+          }
+        .box .h1{
+            font-size:60px;
+        }
+        .box a{
+            color:white;
+        }
+        .flex{
+            display: flex;
+            flex-direction:row;
+            flex-wrap:wrap;
+        }
+        .flex-game-box
+        {
+            margin: 25px;
+            width: 500px;
+        }
+        .game-box{
+            border:1px solid blue;
+            padding:20px 0px 0px 20px;
+            height:431px;
+            background-color: black;
+            color:white;
+        }
+        .img-style{
+            border: 1px solid blue;
+        }
+        .visit{
+            text-decoration:none;
+
+        }
+    </style>
 </head>
 <body>
     <main>
         <div class="box">
-            <h1>Message received!</h1>
+            <h1 class="result-title">Games Found!</h1>
             <a href="/">Back</a>
         </div>
-
-        {% if data[0]['title'] == "Overwatch 2" %}
-        <iframe width="420" height="315" src="{{data[0]['thumbnail']}}" frameborder = "5"></iframe>
-        <p>Genre: {{data[0]['genre']}}</p>
-        {% else %}
-        <img class="aotd-img" src="{{data[0]['release_date']}}">
-        {% endif %}
-
+        <div class="flex">
+        {% for game in data %}
+        <div class="flex-game-box">
+            <div class = "game-box">
+            <img  class="img-style" width="420" height="315" src="{{game['thumbnail']}}">
+            <p>Genre: {{game['genre']}}&nbsp;&nbsp;</p>
+            <h3>{{game['title']}}</h3>
+            <p> {{ game['short_description']}}</p>
+            <p>{{game['release_date']}}</p>
+            <button class="visit"><a href="{{game['game_url']}}">Visit the game</a></button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
         
 
     </main>

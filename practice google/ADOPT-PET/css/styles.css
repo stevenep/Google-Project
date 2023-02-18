@@ -1,8 +1,14 @@
-*{
+/* *{
     padding: 0;
     margin: 0;
 }
 body{
     display: flex;
-    background-color: darkgray;
+    background-color: darkgray;   
 }
+.home_index{
+    background-image: url(https://www.nvidia.com/content/dam/en-zz/Solutions/GeForce/Pascal/4k-ultimate/geforce-4k-ultimate-4k-games-843-u-new.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+} */
