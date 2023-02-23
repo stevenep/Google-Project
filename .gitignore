@@ -1,0 +1,6 @@
+# Byte-compiled python
+__pycache__/
+*.py[cod]
+
+# Temp files
+temp.*
